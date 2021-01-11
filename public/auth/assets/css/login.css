@@ -1,0 +1,338 @@
+
+
+@import "https://fonts.googleapis.com/css?family=Ubuntu:400,700italic";
+@import "https://fonts.googleapis.com/css?family=Cabin:400";
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #000;
+  background-size: cover;
+  font-size: 10px;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+/* =========================================
+Stark Industries Logo
+========================================= */
+#logo {
+  animation: logo-entry 4s ease-in!important;
+  width: 500px!important;
+  margin: 0 auto!important;
+  position: relative!important;
+  z-index: 40!important;
+}
+
+h1 {
+  animation: text-glow 2s ease-out infinite alternate!important;
+  font-family: 'Ubuntu', sans-serif!important;
+  color: #00a4a2!important;
+  font-size: 48px!important;
+  font-size: 4.8rem!important;
+  font-weight: bold!important;
+  position: absolute!important;
+  text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000!important;
+  top: 50px!important;
+}
+h1:before {
+  animation: before-glow 2s ease-out infinite alternate!important;
+  border-left: 535px solid transparent!important;
+  border-bottom: 10px solid #00a4a2!important;
+  content: ' '!important;
+  height: 0!important;
+  position: absolute!important;
+  right: -74px!important;
+  top: -10px!important;
+  width: 0!important;
+}
+h1:after {
+  animation: after-glow 2s ease-out infinite alternate!important;
+  border-left: 100px solid transparent!important;
+  border-top: 16px solid #00a4a2!important;
+  content: ' '!important;
+  height: 0!important;
+  position: absolute!important;
+  right: -85px!important;
+  top: 24px!important;
+  transform: rotate(-47deg)!important;
+  width: 0!important;
+}
+
+/* =========================================
+Log in form
+========================================= */
+#fade-box {
+  animation: input-entry 3s ease-in!important;
+  z-index: 4!important;
+}
+
+.stark-login form {
+  animation: form-entry 3s ease-in-out!important;
+    background: #111!important;
+    background: linear-gradient(#00142e, #021c36)!important;
+    border: 3px solid #00a4a2!important;
+    box-shadow: 0 0 15px #00fffd!important;
+    border-radius: 5px!important;
+    display: inline-block!important;
+    height: 220px;
+    margin: 200px auto 0!important;
+    position: relative!important;
+    z-index: 4!important;
+    width: 500px!important;
+    transition: 1s all!important;
+}
+.stark-login form:hover {
+  border: 6px solid #00fffd!important;
+  box-shadow: 0 0 25px #00fffd!important;
+  transition: 1s all!important;
+}
+.stark-login input {
+  background: #2220!important;
+    background: linear-gradient(#33333300, #22222200)!important;
+    border: 0!important;
+    border-radius: 0px!important;
+    box-shadow: 0 2px 0 #000!important;
+    color: #fff!important;
+    display: block!important;
+    font-family: 'Cabin', helvetica, arial, sans-serif!important;
+    font-size: 13px!important;
+    font-size: 1.3rem!important;
+    height: 40px!important;
+    margin: 20px auto 10px!important;
+    padding: 0 10px!important;
+    text-shadow: 0 0px 0 #000!important;
+    width: 400px!important;
+}
+.stark-login input:focus {
+  animation: box-glow 1s ease-out infinite alternate!important;
+  background: #0B4252!important;
+  background: linear-gradient(#333933, #222922)!important;
+  border-color: #00fffc!important;
+  box-shadow: 0 0 5px rgba(0, 255, 253, 0.2), inset 0 0 5px rgba(0, 255, 253, 0.1), 0 2px 0 #000!important;
+  color: #efe!important;
+  outline: none!important;
+}
+.stark-login input:invalid {
+  border-bottom: 1px solid #00a4a2!important;
+    box-shadow: 0 0 0px rgba(255, 0, 0, 0), inset 0 0 0px rgba(255, 0, 0, 0), 0 0px 0 #000!important;
+}
+.stark-login button {
+  animation: input-entry 3s ease-in!important;
+  background: #222!important;
+  background: linear-gradient(#333333, #222222)!important;
+  box-sizing: content-box!important;
+  border: 1px solid #444!important;
+  border-left-color: #000!important;
+  border-radius: 5px!important;
+  box-shadow: 0 2px 0 #000!important;
+  color: #fff!important;
+  display: block!important;
+  font-family: 'Cabin', helvetica, arial, sans-serif!important;
+  font-size: 13px!important;
+  font-weight: 400!important;
+  height: 40px!important;
+  line-height: 40px!important;
+  margin: 20px auto!important;
+  padding: 0!important;
+  position: relative!important;
+  text-shadow: 0 -1px 0 #000!important;
+  width: 400px!important;
+  transition: 1s all!important;
+}
+.stark-login button:hover,
+.stark-login button:focus {
+  background: #0C6125!important;
+  background: linear-gradient(#393939, #292929)!important;
+  color: #00fffc!important;
+  outline: none!important;
+  transition: 1s all!important;
+}
+.stark-login button:active {
+  background: #292929!important;
+  background: linear-gradient(#393939, #292929)!important;
+  box-shadow: 0 1px 0 #000, inset 1px 0 1px #222!important;
+  top: 1px!important;
+}
+
+/* =========================================
+Spinner
+========================================= */
+#circle1 {
+  animation: circle1 4s linear infinite, circle-entry 6s ease-in-out!important;
+  background: #000!important;
+  border-radius: 50%!important;
+  border: 10px solid #00a4a2!important;
+  box-shadow: 0 0 0 2px black, 0 0 0 6px #00fffc!important;
+  height: 500px!important;
+  width: 500px!important;
+  position: absolute!important;
+  top: 20px!important;
+  left: 50%!important;
+  margin-left: -250px!important;
+  overflow: hidden!important;
+  opacity: 0.4!important;
+  z-index: -3!important;
+}
+
+#inner-cirlce1 {
+  background: #000!important;
+  border-radius: 50%!important;
+  border: 36px solid #00fffc!important;
+  height: 460px!important;
+  width: 460px!important;
+  margin: 10px!important;
+}
+#inner-cirlce1:before {
+  content: ' '!important;
+  width: 240px!important;
+  height: 480px!important;
+  background: #000!important;
+  position: absolute!important;
+  top: 0!important;
+  left: 0!important;
+}
+#inner-cirlce1:after {
+  content: ' '!important;
+  width: 480px!important;
+  height: 240px!important;
+  background: #000!important;
+  position: absolute!important;
+  top: 0!important;
+  left: 0!important;
+}
+
+/* =========================================
+Hexagon Mesh
+========================================= */
+.hexagons {
+  animation: logo-entry 4s ease-in;
+  color: #000;
+  font-size: 52px;
+  font-size: 5.1rem;
+  letter-spacing: -0.2em;
+  line-height: 0.7;
+  position: absolute;
+  text-shadow: 0 0 6px #00fffc;
+  top: 310px;
+  width: 100%;
+  transform: perspective(600px) rotateX(60deg) scale(1.4);
+  z-index: -3;
+}
+
+/* =========================================
+Animation Keyframes
+========================================= */
+@keyframes logo-entry {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes circle-entry {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+@keyframes input-entry {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes form-entry {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    padding: 0;
+  }
+  20% {
+    height: 0;
+    border: 1px solid #00a4a2;
+    width: 0;
+    opacity: 0;
+    padding: 0;
+  }
+  40% {
+    width: 0;
+    height: 220px;
+    border: 6px solid #00a4a2;
+    opacity: 1;
+    padding: 0;
+  }
+  100% {
+    height: 220px;
+    width: 500px;
+  }
+}
+@keyframes box-glow {
+  0% {
+    border-color: #00b8b6;
+    box-shadow: 0 0 5px rgba(0, 255, 253, 0.2), inset 0 0 5px rgba(0, 255, 253, 0.1), 0 2px 0 #000;
+  }
+  100% {
+    border-color: #00fffc;
+    box-shadow: 0 0 20px rgba(0, 255, 253, 0.6), inset 0 0 10px rgba(0, 255, 253, 0.4), 0 2px 0 #000;
+  }
+}
+@keyframes text-glow {
+  0% {
+    color: #00a4a2;
+    text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000;
+  }
+  100% {
+    color: #00fffc;
+    text-shadow: 0 0 20px rgba(0, 255, 253, 0.6), 0 0 10px rgba(0, 255, 253, 0.4), 0 2px 0 #000;
+  }
+}
+@keyframes before-glow {
+  0% {
+    border-bottom: 10px solid #00a4a2;
+  }
+  100% {
+    border-bottom: 10px solid #00fffc;
+  }
+}
+@keyframes after-glow {
+  0% {
+    border-top: 16px solid #00a4a2;
+  }
+  100% {
+    border-top: 16px solid #00fffc;
+  }
+}
+@keyframes circle1 {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
